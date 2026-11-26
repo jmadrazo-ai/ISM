@@ -1,0 +1,108 @@
+/* Piezas de portada. Las paginas de desarrollo pueden reutilizar .hero y .split. */
+
+.hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; color: var(--white); overflow: hidden; background: var(--forest); isolation: isolate; }
+.hero--short { min-height: min(78svh, 760px); }
+.hero__img { position: absolute; inset: 0; z-index: -2; }
+.hero__img img { width: 100%; height: 100%; object-fit: cover; animation: kenburns 24s var(--ease) both alternate infinite; }
+.hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(12, 18, 24, .62) 0%, rgba(12, 18, 24, .12) 24%, rgba(12, 18, 24, .18) 46%, rgba(12, 18, 24, .84) 100%); }
+.hero__in { width: 100%; padding-block: calc(var(--nav-h) + 40px) clamp(32px, 6vh, 72px); }
+.hero .display { max-width: 12ch; animation: fadeUp 1.2s var(--ease-out) .15s both; }
+.hero__sub { margin-top: 20px; font-size: clamp(18px, 1.6vw, 22px); max-width: 40ch; color: rgba(255, 253, 249, .86); animation: fadeUp 1.2s var(--ease-out) .3s both; }
+.hero .eyebrow { animation: fadeUp 1.2s var(--ease-out) both; margin-bottom: 18px; }
+
+/* Buscador de portada */
+.finder { margin-top: clamp(28px, 4vh, 44px); display: grid; grid-template-columns: 1.1fr 1.2fr .9fr auto; align-items: stretch; background: rgba(255, 253, 249, .96); color: var(--ink); border-radius: 24px; padding: 8px; box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .5); max-width: 880px; animation: fadeUp 1.2s var(--ease-out) .45s both; }
+.finder label { display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 10px 20px; border-radius: 18px; position: relative; cursor: pointer; transition: background .2s; min-width: 0; }
+.finder label:hover { background: var(--sand); }
+.finder label + label::before { content: ''; position: absolute; left: 0; top: 22%; height: 56%; width: 1px; background: var(--line); }
+.finder label > span { font: 600 11px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+.finder select { border: 0; background: transparent; font: 500 17px/1.3 var(--sans); padding: 0; outline: 0; cursor: pointer; appearance: none; -webkit-appearance: none; width: 100%; text-overflow: ellipsis; }
+.finder .btn { min-height: 60px; border-radius: 18px; padding: 0 28px; }
+/* El menu nativo ocupa toda la celda: un clic en cualquier punto lo abre, sin saltos.
+   La animacion de entrada no deja transformacion residual (los menus nativos se descolocan sobre capas transformadas). */
+.finder { animation-fill-mode: backwards; }
+.finder label { padding: 0; min-height: 60px; }
+.finder label > span { position: absolute; left: 20px; top: 13px; pointer-events: none; z-index: 1; }
+.finder select { height: 100%; min-height: 60px; padding: 30px 20px 9px; border-radius: 18px; }
+.finder select:focus-visible { box-shadow: inset 0 0 0 2px var(--leaf); }
+.hero .display, .hero__sub, .hero .eyebrow, .hero__quick { animation-fill-mode: backwards; }
+.hero__quick { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; animation: fadeUp 1.2s var(--ease-out) .6s both; }
+.hero__quick a { font-size: 14px; padding: 8px 14px; border-radius: var(--r-pill); background: rgba(255, 253, 249, .14); border: 1px solid rgba(255, 253, 249, .24); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: background .2s; }
+.hero__quick a:hover { background: rgba(255, 253, 249, .28); }
+@media (max-width: 760px) {
+  .finder { grid-template-columns: 1fr 1fr; border-radius: 22px; }
+  .finder label:nth-child(3) { grid-column: 1 / -1; border-top: 1px solid var(--line); border-radius: 0; }
+  .finder label:nth-child(3)::before { display: none; }
+  .finder .btn { grid-column: 1 / -1; }
+}
+
+/* Cabecera de seccion */
+.shead { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: clamp(34px, 4.5vw, 55px); flex-wrap: wrap; }
+.shead .h2 { max-width: 16ch; margin-top: 14px; }
+
+/* Desarrollos: dos tarjetas editoriales */
+.dev { position: relative; display: block; border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 1 / 1.272; color: var(--white); isolation: isolate; background: var(--forest); }
+.dev img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform 1.6s var(--ease-out); }
+.dev:hover img { transform: scale(1.06); }
+.dev::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(12, 18, 24, .1) 30%, rgba(12, 18, 24, .82) 100%); }
+.dev__in { position: absolute; inset: auto 0 0 0; padding: clamp(24px, 3vw, 40px); }
+.dev__in .h2 { margin: 10px 0 12px; }
+.dev__facts { display: flex; gap: 28px; margin-top: 22px; padding-top: 20px; border-top: 1px solid rgba(255, 253, 249, .22); font-size: 14px; color: rgba(255, 253, 249, .8); }
+.dev__facts b { display: block; font: 500 26px/1 var(--serif); color: var(--white); margin-bottom: 4px; }
+@media (max-width: 640px) { .dev { aspect-ratio: 3 / 4; } .dev__facts { gap: 18px; } }
+
+/* Dos columnas editoriales */
+.split { display: grid; grid-template-columns: minmax(0, 1.618fr) minmax(0, 1fr); gap: clamp(34px, 5.5vw, 89px); align-items: center; }
+.split--top { align-items: start; }
+@media (max-width: 900px) { .split { grid-template-columns: minmax(0, 1fr); } }
+
+/* Que tan rapido puede ser tuya */
+.speed__num { display: flex; align-items: baseline; gap: 14px; margin: 26px 0 8px; }
+.speed__num span:last-child { font: 400 italic clamp(24px, 3vw, 36px)/1 var(--serif); color: rgba(255, 253, 249, .8); }
+.speed .seg { background: rgba(255, 253, 249, .1); border-color: rgba(255, 253, 249, .16); }
+.speed .seg button { color: rgba(255, 253, 249, .7); }
+.speed .seg button[aria-pressed="true"] { background: var(--white); color: var(--forest); }
+.switch { display: inline-flex; align-items: center; gap: 12px; cursor: pointer; font-size: 15px; }
+.switch input { position: absolute; opacity: 0; }
+.switch i { width: 46px; height: 28px; border-radius: 28px; background: rgba(127, 127, 127, .34); position: relative; transition: background .3s; flex: none; }
+.switch i::after { content: ''; position: absolute; left: 3px; top: 3px; width: 22px; height: 22px; border-radius: 50%; background: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, .3); transition: transform .35s var(--ease-out); }
+.switch input:checked + i { background: var(--leaf); }
+.switch input:checked + i::after { transform: translateX(18px); }
+.switch input:focus-visible + i { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* Un dia aqui */
+.day { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.618fr); gap: clamp(34px, 5vw, 89px); align-items: center; }
+.day__list button { display: block; width: 100%; text-align: left; padding: 22px 0; border-top: 1px solid var(--line); position: relative; opacity: .42; transition: opacity .5s var(--ease); }
+.day__list button:last-child { border-bottom: 1px solid var(--line); }
+.day__list button[aria-selected="true"] { opacity: 1; }
+.day__list time { font: 600 12px/1 var(--sans); letter-spacing: .14em; color: var(--leaf); }
+.day__list b { display: block; font: 500 clamp(22px, 2.3vw, 30px)/1.15 var(--serif); margin-top: 8px; }
+.day__list p { font-size: 15px; color: var(--ink-2); max-height: 0; overflow: hidden; transition: max-height .6s var(--ease), margin .6s var(--ease); }
+.day__list button[aria-selected="true"] p { max-height: 80px; margin-top: 8px; }
+.day__list button::before { content: ''; position: absolute; left: 0; top: -1px; height: 2px; width: 100%; background: var(--forest); transform: scaleX(0); transform-origin: left; }
+.day__list button[aria-selected="true"]::before { animation: dayfill var(--dur, 5s) linear forwards; }
+@keyframes dayfill { to { transform: scaleX(1); } }
+.day__stage { position: relative; aspect-ratio: 1 / 1.272; border-radius: var(--r-lg); overflow: hidden; background: var(--stone); }
+.day__stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.08); transition: opacity 1.2s var(--ease), transform 6s var(--ease-out); }
+.day__stage img.is-on { opacity: 1; transform: scale(1); }
+@media (max-width: 900px) { .day { grid-template-columns: minmax(0, 1fr); } .day__stage { aspect-ratio: 4 / 3; order: -1; } }
+
+/* Principios */
+.principle { padding-top: 26px; border-top: 1px solid var(--line-2); }
+.principle .h3 { margin: 14px 0 10px; }
+.principle__n { font: 500 15px/1 var(--serif); font-style: italic; color: var(--ink-3); }
+
+/* Llamado final */
+.cta { position: relative; border-radius: var(--r-lg); overflow: hidden; padding: clamp(48px, 9vw, 120px) clamp(24px, 6vw, 88px); color: var(--white); isolation: isolate; background: var(--forest); }
+.cta img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.cta::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(12, 18, 24, .84), rgba(12, 18, 24, .3)); }
+
+/* ---- Proporcion aurea (phi = 1.618) ----
+   Columnas de dos partes: 1.618fr y 1fr (61.8 % y 38.2 %). Fotos apaisadas 1.618:1; retratos 1:1.272 (raiz de phi).
+   Espaciado en escala de Fibonacci: 8, 13, 21, 34, 55, 89, 144 px. Letra: 17 -> 27.5 -> 44.5 -> 72 -> 116 (cada salto x 1.618).
+   Portada: en pantallas amplias el titulo termina cerca de la linea del 61.8 % de la altura. */
+@media (min-width: 900px) and (min-height: 760px) {
+  .hero--phi { align-items: flex-start; }
+  /* 275 px = alto de etiqueta + titulo a tamano completo; asi la base del titulo cae en el 61.8 % de la altura */
+  .hero--phi .hero__in { padding-top: max(calc(var(--nav-h) + 34px), calc(61.8svh - 275px)); padding-bottom: 34px; }
+}

@@ -1,0 +1,9 @@
+<!doctype html><meta charset="utf-8"><title>sheet</title>
+<body>
+<script>
+const q = new URLSearchParams(location.search);
+const ids = (q.get('ids') || '').split(',').filter(Boolean); const c = +(q.get('c') || 5); const ar = (q.get('ar') || '3x2').split('x').map(Number);
+const w = Math.round(1500 / c); const h = Math.round(w * ar[1] / ar[0]);
+document.write(`<style>body{margin:8px;font:12px sans-serif;display:grid;gap:6px;grid-template-columns:repeat(${c},1fr)}figure{margin:0}img{width:100%;aspect-ratio:${ar[0]}/${ar[1]};object-fit:cover;background:#ddd;display:block}figcaption{font-weight:700}</style>`);
+ids.forEach((u, i) => document.write(`<figure><img src="https://images.unsplash.com/${u}?auto=format&fit=crop&w=${w}&h=${h}&q=75"><figcaption>${i + 1} · ${u.slice(6, 19)}</figcaption></figure>`));
+</script>

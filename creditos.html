@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Créditos de fotografía | Inmobiliaria San Miguel</title>
+<meta name="description" content="Créditos y licencias de las fotografías de San Miguel de Allende usadas en el sitio de Inmobiliaria San Miguel.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1C2730">
+<script>try{document.documentElement.dataset.lang=JSON.parse(localStorage.getItem('ism.lang'))||((navigator.language||'es').startsWith('en')?'en':'es')}catch(e){document.documentElement.dataset.lang='es'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<style>
+  .cred { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(21px, 2.6vw, 34px); margin-top: 55px; }
+  .cred figure { margin: 0; }
+  .cred img { width: 100%; aspect-ratio: 1.618 / 1; object-fit: cover; border-radius: var(--r); }
+  .cred figcaption { margin-top: 13px; }
+  .cred b { display: block; font: 500 21px/1.2 var(--serif); }
+  .cred small { display: block; margin-top: 5px; font-size: 14px; color: var(--ink-2); }
+  @media (max-width: 900px) { .cred { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .cred { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<main>
+  <section class="section" style="padding-top:calc(var(--nav-h) + 55px)">
+    <div class="wrap">
+      <p class="eyebrow"><span lang="es">Fotografía</span><span lang="en">Photography</span></p>
+      <h1 class="h1" style="margin:13px 0 21px"><span lang="es">Créditos de fotografía.</span><span lang="en">Photo credits.</span></h1>
+      <p class="lede"><span lang="es">Las fotos de San Miguel de Allende son de fotógrafos independientes y se usan bajo la licencia de Unsplash. Las fotos, renders y planos de los desarrollos son del desarrollador.</span><span lang="en">The photographs of San Miguel de Allende are by independent photographers and are used under the Unsplash License. Photos, renders and plans of the developments belong to the developer.</span></p>
+      <div class="cred" id="cred"></div>
+      <p class="demo-note" style="margin-top:34px"><span lang="es">Fachadas de Terraviva: Arq. N. Ruiz.</span><span lang="en">Terraviva facades: architect N. Ruiz.</span></p>
+    </div>
+  </section>
+</main>
+<script type="module">
+import { mount, $, T, img, PH } from './js/ui.js';
+import { CREDITS } from './js/data.js';
+mount({});
+$('#cred').innerHTML = CREDITS.map(([k, title, user, id]) => `<figure><img src="${img(PH[k], 810, 500)}" alt="${title}" loading="lazy" decoding="async">
+  <figcaption><b>${title}</b><small>${T('Foto de', 'Photo by')} <a class="link" href="https://unsplash.com/@${user}" target="_blank" rel="noopener">@${user}</a> · <a class="link" href="https://unsplash.com/photos/${id}" target="_blank" rel="noopener">Unsplash</a></small></figcaption></figure>`).join('');
+</script>
+</body>
+</html>

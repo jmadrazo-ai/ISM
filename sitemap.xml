@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Prototipo. En produccion se genera del inventario: una URL por propiedad y por idioma. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.inmobiliariasanmiguel.mx/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.inmobiliariasanmiguel.mx/propiedades.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.inmobiliariasanmiguel.mx/propiedades.html?type=departamento</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.inmobiliariasanmiguel.mx/propiedades.html?type=casa</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.inmobiliariasanmiguel.mx/propiedades.html?type=terreno</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.inmobiliariasanmiguel.mx/desarrollos/punta-del-cielo.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.inmobiliariasanmiguel.mx/desarrollos/terraviva.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.inmobiliariasanmiguel.mx/san-miguel.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>

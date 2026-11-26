@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Página no encontrada | Inmobiliaria San Miguel</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1C2730">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<!-- Pagina autonoma: GitHub Pages la sirve desde cualquier ruta, asi que no depende de archivos con ruta relativa. -->
+<style>
+  body { margin: 0; min-height: 100svh; display: grid; place-items: center; padding: 34px; background: #F8F7F4; color: #15191D; font: 400 17px/1.55 'DM Sans', -apple-system, Arial, sans-serif; text-align: center; }
+  p.k { font: 600 12px/1 'DM Sans', sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #2B6F8C; margin: 0; }
+  h1 { font: 500 clamp(40px, 6vw, 72px)/1.02 'Cormorant Garamond', Georgia, serif; letter-spacing: -.018em; margin: 13px 0 21px; }
+  p { margin: 0 auto; max-width: 40ch; color: #4D555C; }
+  a { display: inline-flex; align-items: center; min-height: 48px; margin-top: 34px; padding: 0 24px; border-radius: 999px; background: #1C2730; color: #FEFEFC; font-weight: 500; text-decoration: none; }
+</style>
+</head>
+<body>
+<main>
+  <p class="k">Página no encontrada</p>
+  <h1>Esta página no está aquí.</h1>
+  <p>Puede que la liga esté incompleta o que la hayamos movido. Todo lo demás sigue en su lugar.</p>
+  <a id="home" href="./">Ir al inicio</a>
+</main>
+<script>
+  // GitHub Pages sirve los repositorios en /<repositorio>/: el inicio es ese primer tramo de la ruta.
+  if (location.hostname.endsWith('github.io')) { var s = location.pathname.split('/'); document.getElementById('home').href = '/' + (s[1] || '') + '/'; }
+  else document.getElementById('home').href = '/';
+</script>
+</body>
+</html>

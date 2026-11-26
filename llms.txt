@@ -1,0 +1,37 @@
+# Inmobiliaria San Miguel
+
+> Inmobiliaria en San Miguel de Allende, Guanajuato, México. Vende casas, departamentos y terrenos residenciales con precio publicado, en español y en inglés. Real estate agency in San Miguel de Allende, Mexico, selling houses, apartments and residential lots with published prices, in English and Spanish.
+
+Nota del prototipo: precios, tiempos e inventario son datos de ejemplo hasta que se carguen los reales.
+
+## Qué vendemos / What we sell
+
+- [Todas las propiedades / All properties](/propiedades.html): buscador por tipo, precio, recámaras, baños y entrega.
+- [Departamentos en venta en San Miguel de Allende](/propiedades.html?type=departamento)
+- [Casas en venta en San Miguel de Allende](/propiedades.html?type=casa)
+- [Terrenos en venta en San Miguel de Allende](/propiedades.html?type=terreno)
+
+## Desarrollos / Developments
+
+- [Punta del Cielo](/desarrollos/punta-del-cielo.html): departamentos y casas terminadas en comunidad cerrada, La Lejona, frente al Club de Golf Malanquín, a 5 minutos en auto del Centro Histórico. Siete modelos de 96 a 303 m². Casa club con restaurante, 4 albercas, 8 jacuzzis, gimnasio, vapor y pádel. Entrega inmediata.
+- [Terraviva Picachos](/desarrollos/terraviva.html): 71 lotes residenciales de 128 a 220 m² con vistas a Los Picachos. Tres modelos de casa para construir, con constructor propio o construida por el desarrollador.
+
+## Guías / Guides
+
+- [Vivir en San Miguel de Allende / Living in San Miguel de Allende](/san-miguel.html): distancias, servicios, actividades y cómo comprar siendo extranjero.
+- [Cómo comprar / How to buy](/#como-comprar): línea de tiempo de la primera videollamada a la entrega de llaves.
+
+## Datos de contacto / Contact
+
+- Dirección: Prolongación Vicente Araiza s/n, La Lejona, 37765 San Miguel de Allende, Guanajuato, México
+- Teléfono: +52 415 688 4255
+- WhatsApp: +52 415 111 2330
+- English line: +52 415 179 3155
+- Idiomas / Languages: español, English
+
+## Preguntas frecuentes / FAQ
+
+- ¿Puedo comprar si soy extranjero? Sí. Te acompañamos con el notario y en tu idioma.
+- ¿Qué tan lejos está del Centro? Cinco minutos en auto, veinte caminando.
+- ¿Los precios publicados son reales? Sí: precio, superficie y estatus de cada propiedad están en el sitio.
+- ¿Hay planes de pago? Sí, a meses sin intereses.

@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terrenos en venta en San Miguel de Allende con vista a Los Picachos | Terraviva Picachos</title>
+<meta name="description" content="Terrenos residenciales en venta en San Miguel de Allende con vista a Los Picachos y a la presa Allende. Mapa de lotes con precio, superficie y disponibilidad; elige un modelo de casa, trae a tu constructor o la construimos por ti.">
+<link rel="canonical" href="https://www.inmobiliariasanmiguel.mx/desarrollos/terraviva.html">
+<link rel="alternate" hreflang="es-MX" href="https://www.inmobiliariasanmiguel.mx/desarrollos/terraviva.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Inmobiliaria San Miguel">
+<meta property="og:url" content="https://www.inmobiliariasanmiguel.mx/desarrollos/terraviva.html">
+<meta property="og:title" content="Terraviva Picachos · Terrenos en San Miguel de Allende">
+<meta property="og:description" content="Lotes residenciales con vista a Los Picachos. Elige tu lote en el mapa y construye a tu manera.">
+<meta property="og:image" content="https://static.wixstatic.com/media/44b3a6_20c845fbac5d4db8a35df545eafc86ab~mv2.jpg/v1/fill/w_1200,h_630,al_c,q_85/terraviva.jpg">
+<meta name="theme-color" content="#1C2730">
+<script>try{document.documentElement.dataset.lang=JSON.parse(localStorage.getItem('ism.lang'))||((navigator.language||'es').startsWith('en')?'en':'es')}catch(e){document.documentElement.dataset.lang='es'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://static.wixstatic.com">
+<link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/home.css"><link rel="stylesheet" href="../css/project.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+ {"@type":"ListItem","position":1,"name":"Inmobiliaria San Miguel","item":"https://www.inmobiliariasanmiguel.mx/"},
+ {"@type":"ListItem","position":2,"name":"Terraviva Picachos","item":"https://www.inmobiliariasanmiguel.mx/desarrollos/terraviva.html"}
+]}
+</script>
+</head>
+<body>
+
+<main>
+  <!-- 1. Portada -->
+  <section class="hero" aria-labelledby="h-hero">
+    <div class="hero__img"><img id="hero-img" alt="Vista a Los Picachos desde Terraviva, San Miguel de Allende" fetchpriority="high"></div>
+    <div class="wrap hero__in">
+      <p class="eyebrow eyebrow--gold" id="hero-kind"></p>
+      <h1 class="display" id="h-hero">Terraviva Picachos</h1>
+      <p class="hero__sub" id="hero-tag"></p>
+      <div class="hero__meta" id="hero-meta"></div>
+      <div class="hero__actions">
+        <a class="btn btn--light btn--lg" href="#lotes"><span lang="es">Elegir mi lote</span><span lang="en">Choose my lot</span></a>
+        <button class="btn btn--glass btn--lg" data-contact data-intent="videollamada"><span lang="es">Agendar videollamada</span><span lang="en">Book a video call</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. La historia -->
+  <section class="section" aria-labelledby="h-story">
+    <div class="wrap">
+      <p class="eyebrow reveal" id="h-story"><span lang="es">La idea</span><span lang="en">The idea</span></p>
+      <p class="story reveal" style="--d:.1s" id="story"></p>
+      <div class="facts grid-3" id="facts"></div>
+      <p class="trust reveal" id="trust"></p>
+    </div>
+  </section>
+
+  <!-- 3. Mapa de lotes -->
+  <section class="section section--white" id="lotes" aria-labelledby="h-lots">
+    <div class="wrap">
+      <div class="shead reveal">
+        <div><p class="eyebrow"><span lang="es">Plano de lotes</span><span lang="en">Lot plan</span></p>
+          <h2 class="h2" id="h-lots"><span lang="es">Elige tu lote en el croquis.</span><span lang="en">Pick your lot on the plan.</span></h2></div>
+        <p class="lede"><span lang="es">Mueve tu presupuesto y la superficie que necesitas. Los lotes que te sirven se quedan encendidos.</span><span lang="en">Set your budget and the space you need. The lots that fit stay lit.</span></p>
+      </div>
+
+      <div class="lotctl reveal">
+        <div class="field">
+          <div class="lotctl__top"><label for="f-budget"><span lang="es">Presupuesto máximo</span><span lang="en">Maximum budget</span></label><output id="o-budget" for="f-budget"></output></div>
+          <input type="range" id="f-budget">
+        </div>
+        <div class="field">
+          <div class="lotctl__top"><label for="f-area"><span lang="es">Superficie mínima</span><span lang="en">Minimum area</span></label><output id="o-area" for="f-area"></output></div>
+          <input type="range" id="f-area">
+        </div>
+      </div>
+
+      <div class="lotsum">
+        <p aria-live="polite"><b id="lot-n">0</b><span id="lot-l"></span> <span class="muted" id="lot-of"></span></p>
+        <div class="legend">
+          <span><i class="lg-ok"></i><span lang="es">Disponible</span><span lang="en">Available</span></span>
+          <span><i class="lg-hold"></i><span lang="es">Apartado</span><span lang="en">Reserved</span></span>
+          <span><i class="lg-sold"></i><span lang="es">Vendido</span><span lang="en">Sold</span></span>
+        </div>
+      </div>
+
+      <div class="lots">
+        <div>
+          <div class="pmap" id="map" role="group" aria-labelledby="h-lots"></div>
+          <p class="demo-note" id="map-note" style="margin-top:14px"></p>
+        </div>
+        <aside class="lotcard" id="lotcard" aria-live="polite"></aside>
+      </div>
+
+      <p style="margin-top:20px"><a class="link" id="master-link" target="_blank" rel="noopener"><span lang="es">Ver el plano original del desarrollador</span><span lang="en">See the developer's original drawing</span>
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a></p>
+    </div>
+  </section>
+
+  <!-- 4. Tres maneras de construir -->
+  <section class="section section--sand" aria-labelledby="h-ways">
+    <div class="wrap">
+      <div class="shead reveal">
+        <div><p class="eyebrow"><span lang="es">Tu casa</span><span lang="en">Your home</span></p>
+          <h2 class="h2" id="h-ways"><span lang="es">Tres maneras de construirla.</span><span lang="en">Three ways to build it.</span></h2></div>
+        <p class="lede"><span lang="es">Tú decides cuánto quieres involucrarte. El terreno es el mismo.</span><span lang="en">You decide how involved you want to be. The lot is the same.</span></p>
+      </div>
+      <div class="grid-3" id="ways"></div>
+      <div class="fach reveal">
+        <div class="fach__h"><h3 class="h3"><span lang="es">Seis fachadas para elegir.</span><span lang="en">Six facades to choose from.</span></h3>
+          <p class="muted"><span lang="es">Diseños del Arq. N. Ruiz para Terraviva: piedra de la región, arcos y terrazas.</span><span lang="en">Designs by architect N. Ruiz for Terraviva: local stone, arches and terraces.</span></p></div>
+        <div class="hscroll" id="fach"></div>
+      </div>
+      <p class="demo-note" style="margin-top:24px"><span lang="es">Modelos, precios y tiempos de obra son datos de ejemplo del prototipo; los tiempos cuentan a partir de la firma del terreno.</span><span lang="en">Models, prices and build times are prototype sample data; times count from the lot closing.</span></p>
+    </div>
+  </section>
+
+  <!-- 5. Que tan rapido puede ser tuya -->
+  <section class="section section--forest speed" aria-labelledby="h-speed">
+    <div class="wrap split split--top">
+      <div class="reveal">
+        <p class="eyebrow"><span lang="es">Cómo comprar</span><span lang="en">How to buy</span></p>
+        <h2 class="h1" id="h-speed" style="margin-top:14px"><span lang="es">¿Qué tan rápido puede ser <em>tuya?</em></span><span lang="en">How fast can it be <em>yours?</em></span></h2>
+        <div class="miles">
+          <div><span class="tl__total" id="ms-lot">0</span><span class="u" id="ms-lot-u"></span>
+            <p><span lang="es">El terreno es tuyo, escriturado a tu nombre.</span><span lang="en">The lot is yours, deeded in your name.</span></p></div>
+          <div><span class="tl__total" id="ms-home">0</span><span class="u" id="ms-home-u"></span>
+            <p><span lang="es">Tu casa, lista para vivir.</span><span lang="en">Your home, ready to live in.</span></p></div>
+        </div>
+        <p class="lede"><span lang="es">El terreno es tuyo en semanas. Después eliges un modelo o traes tu proyecto, y construimos contigo.</span><span lang="en">The lot is yours in weeks. Then pick a model or bring your design, and we build with you.</span></p>
+        <div class="stack" style="--gap:22px;margin-top:34px">
+          <div><label class="switch"><input type="checkbox" id="speed-foreign"><i></i><span><span lang="es">Compro desde el extranjero</span><span lang="en">I am buying from abroad</span></span></label></div>
+          <div><button class="btn btn--light btn--lg" data-contact data-intent="videollamada"><span lang="es">Empezar hoy</span><span lang="en">Start today</span></button></div>
+          <p class="demo-note"><span lang="es">Tiempos de ejemplo. Lo relativo a compradores extranjeros está sujeto a confirmación notarial.</span><span lang="en">Sample timings. Anything about foreign buyers is subject to notary confirmation.</span></p>
+        </div>
+      </div>
+      <div class="tl tl--dark" id="speed-tl" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- 6. La vida aqui -->
+  <section class="section" aria-labelledby="h-life">
+    <div class="wrap">
+      <div class="shead reveal">
+        <div><p class="eyebrow"><span lang="es">La vida aquí</span><span lang="en">Life here</span></p>
+          <h2 class="h2" id="h-life"><span lang="es">Lo que viene con el terreno.</span><span lang="en">What comes with the lot.</span></h2></div>
+        <p class="lede"><span lang="es">Tu propio huerto, la vista a Los Picachos cada mañana y una casa club para toda la familia.</span><span lang="en">Your own vegetable garden, Los Picachos every morning and a clubhouse for the whole family.</span></p>
+      </div>
+      <div class="amen" id="amen"></div>
+    </div>
+  </section>
+
+  <!-- 7. Ubicacion -->
+  <section class="section section--sand" aria-labelledby="h-near">
+    <div class="wrap split split--top">
+      <div class="reveal">
+        <p class="eyebrow"><span lang="es">Ubicación</span><span lang="en">Location</span></p>
+        <h2 class="h2" id="h-near" style="margin:14px 0 20px"><span lang="es">Naturaleza alrededor. El Centro a minutos.</span><span lang="en">Nature all around. Centro minutes away.</span></h2>
+        <p class="lede"><span lang="es">La Lejona, junto a Punta del Cielo y frente al Club de Golf Malanquín. Cinco minutos en auto al Centro Histórico.</span><span lang="en">La Lejona, next to Punta del Cielo and across from the Malanquín Golf Club. A five minute drive to the Historic Center.</span></p>
+        <p style="margin-top:28px"><a class="link" href="../san-miguel.html"><span lang="es">Guía para vivir en San Miguel</span><span lang="en">Guide to living in San Miguel</span>
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a></p>
+      </div>
+      <div class="bars reveal" id="near"></div>
+    </div>
+  </section>
+
+  <!-- 8. Cierre -->
+  <section class="section">
+    <div class="wrap"><div class="cta reveal reveal--scale on-dark">
+      <img id="cta-img" alt="" loading="lazy">
+      <p class="eyebrow"><span lang="es">Treinta minutos</span><span lang="en">Thirty minutes</span></p>
+      <h2 class="h1" style="margin:14px 0 18px;max-width:14ch"><span lang="es">Camina tu lote, en vivo.</span><span lang="en">Walk your lot, live.</span></h2>
+      <p class="lede" style="color:rgba(255,253,249,.82)"><span lang="es">Un asesor te lleva por videollamada al lote que elegiste, te muestra la vista y te explica las tres maneras de construir.</span><span lang="en">An advisor takes you to the lot you chose on a video call, shows you the view and walks you through the three ways to build.</span></p>
+      <p style="margin-top:32px"><button class="btn btn--light btn--lg" data-contact data-intent="videollamada"><span lang="es">Agendar videollamada</span><span lang="en">Book a video call</span></button></p>
+    </div></div>
+  </section>
+</main>
+
+<script type="module">
+import { mount, $, $$, T, icon, timeline, renderTimeline, fmtTotal, countUp, reveal, S, img, PH, COMPANY, STATUS, ROOT } from '../js/ui.js';
+import { TV_PLAN, TV_FACADES } from '../js/data.js';
+import { inventory, heroMeta, facts, renderAmenities, nearBars, dock, jsonld, postal, aggregateOffer, amenityLd, plural, range, STATE, BASE } from '../js/project.js';
+const { L } = S;
+
+const P = S.project('terraviva');
+mount({ over: true, current: 'terraviva' });
+const inv = inventory(P.id, (p) => p.type === 'terreno');
+const lots = [...inv.all].sort((a, b) => a.lotIndex - b.lotIndex);
+const byId = Object.fromEntries(lots.map((p) => [p.id, p]));
+const homes = S.properties().filter((p) => p.id.startsWith('tv-casa-')).sort((a, b) => a.price - b.price);
+const street = (p) => p.street;
+const num = (p) => p.model.split(' ').slice(1).join(' ');
+
+// Portada
+$('#hero-img').src = img(P.hero, 2400, 1350);
+$('#hero-kind').textContent = L(P.kind);
+$('#hero-tag').textContent = L(P.tagline);
+heroMeta($('#hero-meta'), inv, ['lote disponible hoy', 'lotes disponibles hoy', 'lot available today', 'lots available today']);
+
+// Historia y cifras
+$('#story').textContent = L(P.blurb);
+facts($('#facts'), P);
+$('#trust').textContent = T(`Desarrolla ${COMPANY.name}: más de ${COMPANY.years} años desarrollando en San Miguel de Allende. Te atendemos en español y en inglés.`,
+  `Developed by ${COMPANY.name}: more than ${COMPANY.years} years developing in San Miguel de Allende. We work with you in English and Spanish.`);
+
+// ---- Croquis de lotes, redibujado ----
+// Dibujo propio en vector. La geometria de cada lote (data.js) y de calles, areas verdes y amenidades
+// se trazo sobre el plano oficial del desarrollador; numeros y superficies son los del plano.
+const map = $('#map');
+const [vx, vy, vw, vh] = TV_PLAN.view;
+const lotLabel = (p) => `${S.title(p)}, ${S.fmtArea(p.lot)}, ${S.fmtPrice(p.price)}, ${L(STATUS[p.status])}`;
+const poly = (pts) => pts.map((q) => q.join(',')).join(' ');
+const box = (pts) => { const xs = pts.map((q) => q[0]), ys = pts.map((q) => q[1]); return { w: Math.max(...xs) - Math.min(...xs), h: Math.max(...ys) - Math.min(...ys), cx: (Math.max(...xs) + Math.min(...xs)) / 2, cy: (Math.max(...ys) + Math.min(...ys)) / 2 }; };
+const centroid = (pts) => pts.reduce((a, q) => [a[0] + q[0] / pts.length, a[1] + q[1] / pts.length], [0, 0]);
+// Lindero: el tramo curvo es una sola curva suave que pasa por los puntos medidos del plano.
+const SITE_D = 'M278,106 L465,165 C900,300 1420,640 1740,1070 L1800,1160 L1992,1508 L2098,1740 L2175,1870 L2175,2080 L1995,2080 L1995,2284 L278,2284 Z';
+// Arboles: camellon del eje central (como en el plano) y jardines. [x, y, radio]
+const TREES = [
+  ...Array.from({ length: 15 }, (_, k) => [600 + k * 74, 1428, 13]),
+  [850, 745, 22], [845, 880, 18], [835, 1000, 24], [885, 1100, 20], [1010, 1045, 17], [1075, 985, 22], [1160, 1030, 19], [1235, 1045, 23], [1320, 1112, 18],
+  [600, 1760, 20], [690, 1750, 24], [790, 1765, 18], [900, 1755, 22], [610, 1915, 22], [700, 1925, 18], [820, 1920, 24], [905, 1915, 19],
+  [1320, 1755, 22], [1410, 1750, 18], [1520, 1760, 24], [1610, 1752, 19], [1325, 1918, 19], [1420, 1925, 23], [1530, 1920, 18], [1612, 1915, 22],
+  [958, 1792, 15], [1262, 1880, 15],
+  [1785, 1790, 20], [1790, 1900, 23], [1785, 2000, 19], [1880, 1785, 17], [2165, 1900, 11], [2020, 1830, 13],
+];
+// Simbolo de arbol de dibujo tecnico: copa en linea, ramas en cruz giradas y punto del tronco. Sin relleno ni sombra.
+const tree = ([x, y, r], i) => { const k = (r * 0.62).toFixed(1); return `<g transform="translate(${x} ${y}) rotate(${(i * 37) % 90})"><circle r="${r}"/><path d="M-${k},0 H${k} M0,-${k} V${k}"/><circle class="cq__trunk" r="2.4"/></g>`; };
+const fmtDims = (p) => (p.dims ? `${S.fmtNum(p.dims[0], 2)} × ${S.fmtNum(p.dims[1], 2)} m` : '');
+const GREENS = [
+  [[800, 660], [813, 660], [855, 678], [945, 730], [1032, 798], [1118, 865], [1207, 935], [1290, 1013], [1368, 1085], [1390, 1118], [1390, 1152], [1276, 1152], [1276, 1078], [950, 1078], [950, 1155], [800, 1155]],
+  [[562, 1715], [948, 1715], [948, 1765], [1273, 1765], [1273, 1708], [1652, 1708], [1652, 1962], [1273, 1962], [1273, 1905], [950, 1905], [950, 1962], [568, 1962]],
+  [[1752, 1742], [2098, 1742], [2175, 1870], [2175, 2080], [1995, 2080], [1995, 2047], [1752, 2047]],
+];
+const tag = (x, y, t, cls = 'cq__lbl', rot = 0) => `<text class="${cls}" x="${x}" y="${y}" ${rot ? `transform="rotate(${rot} ${x} ${y})"` : ''}>${t}</text>`;
+// Dentro del lote va solo el numero, grande. Superficie y precio salen en la etiqueta flotante y en la tarjeta.
+function lotText(p) {
+  const b = box(p.pts); const [gx, gy] = centroid(p.pts); const x = (b.cx + gx) / 2, y = (b.cy + gy) / 2;
+  return `<text class="plot__n${b.h < 100 ? ' plot__n--sm' : ''}" x="${x.toFixed(0)}" y="${y.toFixed(0)}">${String(p.lotNo).padStart(2, '0')}</text>`;
+}
+map.classList.add('pmap--plan');
+map.innerHTML = `<svg class="croquis" viewBox="${vx} ${vy} ${vw} ${vh}" role="group" aria-label="${T('Croquis de lotes de Terraviva Picachos', 'Terraviva Picachos lot plan')}">
+  <defs>
+    <pattern id="hatch" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" class="hatch__bg"/><rect width="1.6" height="11" class="hatch__ln"/></pattern>
+  </defs>
+  <path class="cq__site" d="${SITE_D}"/>
+  <line class="cq__axis" x1="545" y1="1428" x2="1690" y2="1428"/>
+  <polygon class="cq__svc" points="280,108 463,168 463,200 393,182 393,255 279,226"/>
+  ${GREENS.map((g) => `<polygon class="cq__green" points="${poly(g)}"/>`).join('')}
+  <path class="cq__lake" d="M985,1835 C985,1800 1050,1798 1095,1808 C1140,1818 1190,1790 1225,1808 C1255,1822 1250,1860 1215,1868 C1170,1878 1130,1856 1090,1866 C1045,1877 985,1872 985,1835 Z"/>
+  <path class="cq__ripple" d="M1012,1835 C1012,1812 1055,1812 1092,1820 C1136,1830 1182,1806 1212,1820 C1232,1830 1228,1850 1205,1855 C1166,1863 1130,1844 1092,1853 C1058,1861 1012,1858 1012,1835 Z"/>
+  <rect class="cq__pool" x="1950" y="1750" width="143" height="46"/>
+  <g class="cq__club"><rect x="1818" y="1832" width="176" height="204"/><path d="M1818,1832 L1862,1876 M1994,1832 L1950,1876 M1818,2036 L1862,1992 M1994,2036 L1950,1992 M1862,1876 H1950 V1992 H1862 Z"/></g>
+  <g class="cq__court"><rect x="2038" y="1852" width="109" height="216"/><path d="M2038,1960 H2147 M2046,1917 H2139 M2046,2003 H2139 M2092.5,1917 V2003"/></g>
+  <g class="cq__trees">${TREES.map(tree).join('')}</g>
+  ${tag(1118, 1398, 'Circuito Único', 'cq__road')}
+  ${tag(516, 760, 'Circuito Único', 'cq__road', -90)}
+  ${tag(1118, 2242, 'Circuito Único', 'cq__road')}
+  ${tag(1345, 588, 'Circuito Único', 'cq__road', 40)}
+  ${tag(516, 1700, 'Agave', 'cq__name', -90)}${tag(948, 915, 'Yuca', 'cq__name')}${tag(758, 1856, 'Huizache', 'cq__name')}${tag(1464, 1856, 'Huizache', 'cq__name')}${tag(1880, 1452, 'Salvia', 'cq__name')}
+  ${tag(1110, 1838, T('Lago', 'Lake'), 'cq__amen')}${tag(1906, 1934, T('Casa club', 'Clubhouse'), 'cq__amen')}${tag(2021, 1773, T('Alberca', 'Pool'), 'cq__amen')}
+  <g class="cq__dim"><path d="M467,1470 H563 M467,1460 V1480 M563,1460 V1480"/>${tag(515, 1452, '8.00', 'cq__dimt')}
+    <path d="M760,2172 V2284 M750,2172 H770 M750,2284 H770"/>${tag(800, 2228, '8.00', 'cq__dimt')}</g>
+  <g class="cq__gate"><path d="M1968,1332 H1918 M1934,1318 L1918,1332 L1934,1346"/>${tag(1982, 1332, T('Acceso', 'Entrance'), 'cq__road cq__road--start')}</g>
+  <g class="cq__title">
+    ${tag(2180, 196, T('Plano de lotificación', 'Lot plan'), 'cq__tb1')}
+    ${tag(2180, 268, 'Terraviva Picachos', 'cq__tb2')}
+    ${tag(2180, 334, T(`${lots.length} lotes · Agave, Yuca, Huizache y Salvia`, `${lots.length} lots · Agave, Yuca, Huizache and Salvia`), 'cq__tb3')}
+    ${tag(2180, 372, T('Superficies y cotas en metros, del plano del desarrollador', 'Areas and dimensions in metres, from the developer drawing'), 'cq__tb3')}
+    <path d="M1956,436 H2180 M1956,426 V446 M2068,430 V442 M2180,426 V446"/>${tag(1956, 468, '0', 'cq__tb4')}${tag(2068, 468, '10', 'cq__tb4')}${tag(2180, 468, T('20 m aprox.', '20 m approx.'), 'cq__tb4 cq__tb4--end')}
+  </g>
+  ${lots.map((p) => `<g class="plot plot--${p.status}" data-id="${p.id}" role="button" tabindex="-1" aria-pressed="false" aria-label="${lotLabel(p)}"><polygon points="${poly(p.pts)}"/>${lotText(p)}</g>`).join('')}
+</svg><div class="cq__tip" id="lot-tip" aria-hidden="true"></div>`;
+const els = Object.fromEntries($$('.plot[data-id]', map).map((b) => [b.dataset.id, b]));
+const known = lots.find((p) => !p.example);
+$('#map-note').textContent = T(
+  `Croquis redibujado a partir del plano oficial del desarrollador: calles, números y superficies son los del plano. ${known ? `Solo ${known.model} tiene precio publicado; ` : ''}los demás precios y el estatus son datos de ejemplo.`,
+  `Plan redrawn from the developer's official drawing: streets, numbers and areas are those of the drawing. ${known ? `Only ${known.model} has a published price; ` : ''}other prices and all statuses are sample data.`);
+$('#master-link').href = img(P.master, 2475, 2383, 'fit');
+
+// Controles: presupuesto y superficie minima
+const avail = inv.avail;
+const STEP = 25000;
+const budget = $('#f-budget'), area = $('#f-area');
+budget.min = Math.floor(Math.min(...avail.map((p) => p.price)) / STEP) * STEP;
+budget.max = Math.ceil(Math.max(...avail.map((p) => p.price)) / STEP) * STEP;
+budget.step = STEP; budget.value = budget.max;
+area.min = Math.floor(Math.min(...lots.map((p) => p.lot)));
+area.max = Math.floor(Math.max(...avail.map((p) => p.lot)));
+area.step = 1; area.value = area.min;
+const fill = (r) => r.style.setProperty('--p', `${((r.value - r.min) / (r.max - r.min || 1)) * 100}%`);
+function apply() {
+  const max = +budget.value, min = +area.value;
+  let n = 0;
+  lots.forEach((p) => {
+    const ok = p.status === 'disponible' && p.price <= max && p.lot >= min;
+    if (ok) n++;
+    els[p.id].classList.toggle('is-dim', p.status === 'disponible' && !ok);
+  });
+  const bt = `${T('Hasta', 'Up to')} ${S.fmtPrice(max)}`, at = `${T('Desde', 'From')} ${S.fmtArea(min)}`;
+  $('#o-budget').textContent = bt; budget.setAttribute('aria-valuetext', bt);
+  $('#o-area').textContent = at; area.setAttribute('aria-valuetext', at);
+  fill(budget); fill(area);
+  $('#lot-n').textContent = S.fmtNum(n);
+  $('#lot-l').textContent = n === 1 ? T('lote dentro de tu presupuesto', 'lot within your budget') : T('lotes dentro de tu presupuesto', 'lots within your budget');
+  $('#lot-of').textContent = n ? T(`de ${avail.length} disponibles hoy`, `of ${avail.length} available today`) : T('Prueba con otro presupuesto o una superficie menor.', 'Try another budget or a smaller area.');
+}
+budget.addEventListener('input', apply); area.addEventListener('input', apply);
+
+// Tarjeta del lote. Reglas:
+//  - Sin lote elegido: pasar el cursor previsualiza.
+//  - Con un lote elegido: la tarjeta se queda fija; pasar el cursor por otros lotes no la cambia.
+//  - Tocar el lote elegido otra vez lo suelta. Tocar otro lote cambia la eleccion.
+const card = $('#lotcard');
+let sel = null, shown;
+function show(p, animate) {
+  if (shown === (p ? p.id : null) && !animate) return; shown = p ? p.id : null;
+  card.classList.toggle('is-empty', !p);
+  if (!p) { card.innerHTML = `<div class="lotcard__empty"><p class="eyebrow">${T('Croquis de lotes', 'Lot plan')}</p><h3 class="h3">${T('Elige un lote.', 'Pick a lot.')}</h3><p class="muted">${T('Pasa el cursor para ver su superficie y precio. Toca un lote para fijarlo; tócalo de nuevo para soltarlo.', 'Hover to see area and price. Click a lot to pin it; click it again to release it.')}</p></div>`; return; }
+  const st = p.status;
+  card.innerHTML = `<div class="${animate ? 'lotcard__in' : ''}">
+    <p class="eyebrow lotcard__eb">${T('Calle', 'Street')} ${street(p)} · ${L(p.level)}</p>
+    <div class="lotcard__head"><h3 class="h2">${p.model}</h3><span class="badge badge--${STATE[st]}">${L(STATUS[st])}</span></div>
+    <dl class="lotfig">
+      <div><dt>${T('Superficie', 'Area')}</dt><dd>${S.fmtArea(p.lot)}</dd></div>
+      ${p.dims ? `<div><dt>${T('Frente × fondo', 'Frontage × depth')}</dt><dd>${fmtDims(p)}</dd></div>` : ''}
+      <div><dt>${T('Precio', 'Price')}</dt><dd>${S.fmtPrice(p.price)}</dd></div>
+      <div><dt>${T('Precio por m²', 'Price per m²')}</dt><dd>${S.fmtPrice(Math.round(p.price / p.lot))}</dd></div>    </dl>
+    <div class="stack">
+      <a class="btn btn--primary btn--block" href="${ROOT}propiedad.html?id=${p.id}">${st === 'vendido' ? T('Ver detalles', 'See details') : T('Ver este lote', 'See this lot')} ${icon('arrow', 18)}</a>
+      ${st !== 'vendido' ? `<button class="btn btn--ghost btn--block" data-contact="${p.id}" data-intent="visita">${T('Quiero visitarlo', 'I want to visit it')}</button>` : ''}
+    </div>
+    <p class="demo-note">${p.example ? T('Superficie del croquis oficial. Precio y estatus de ejemplo.', 'Area from the official plan. Sample price and status.') : T('Superficie y precio publicados por el desarrollador.', 'Area and price published by the developer.')}</p></div>`;
+}
+let tab = lots[0]; // el lote que recibe el foco del teclado
+function select(p, focus) {
+  if (sel) els[sel.id].setAttribute('aria-pressed', 'false');
+  els[tab.id].tabIndex = -1; tab = p; els[p.id].tabIndex = 0;
+  sel = sel && sel.id === p.id ? null : p;      // tocar el mismo lote lo suelta
+  if (sel) els[p.id].setAttribute('aria-pressed', 'true');
+  map.classList.toggle('has-sel', !!sel);
+  if (focus) els[p.id].focus();
+  show(sel, true);
+}
+map.addEventListener('click', (e) => { const b = e.target.closest('.plot[data-id]'); if (b) select(byId[b.dataset.id]); });
+map.addEventListener('pointerover', (e) => { if (e.pointerType !== 'mouse' || sel) return; const b = e.target.closest('.plot[data-id]'); if (b) show(byId[b.dataset.id]); });
+map.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse' && !sel) show(null); });
+// Etiqueta flotante: nombre, superficie y precio del lote bajo el cursor. No cambia la tarjeta ni la seleccion.
+const tip = $('#lot-tip');
+map.addEventListener('pointermove', (e) => {
+  if (e.pointerType !== 'mouse') return;
+  const b = e.target.closest('.plot[data-id]');
+  if (!b) { tip.classList.remove('is-on'); return; }
+  const p = byId[b.dataset.id];
+  if (tip.dataset.id !== p.id) {
+    tip.dataset.id = p.id;
+    tip.innerHTML = `<b>${p.model}</b><span>${S.fmtArea(p.lot)}${p.dims ? ` · ${fmtDims(p)}` : ''}</span><span>${S.fmtPrice(p.price)}</span><small class="tip--${p.status}">${L(STATUS[p.status])}</small>`;
+    const r = b.querySelector('polygon').getBoundingClientRect(), m = map.getBoundingClientRect();
+    const below = r.top - m.top < 110;
+    tip.classList.toggle('is-below', below);
+    tip.style.left = `${Math.min(Math.max(r.left - m.left + map.scrollLeft + r.width / 2, 120), map.scrollWidth - 120)}px`;
+    tip.style.top = `${(below ? r.bottom : r.top) - m.top + map.scrollTop}px`;
+  }
+  tip.classList.add('is-on');
+});
+map.addEventListener('pointerleave', () => tip.classList.remove('is-on'));
+map.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') { const b = e.target.closest('.plot[data-id]'); if (b) { e.preventDefault(); select(byId[b.dataset.id], true); } return; }
+  if (e.key === 'Escape' && sel) { select(sel, true); return; }
+  const d = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+  const i = lots.indexOf(tab);
+  const to = e.key === 'Home' ? 0 : e.key === 'End' ? lots.length - 1 : d ? Math.min(lots.length - 1, Math.max(0, i + d)) : null;
+  if (to == null) return; e.preventDefault();
+  els[tab.id].tabIndex = -1; tab = lots[to]; els[tab.id].tabIndex = 0; els[tab.id].focus(); if (!sel) show(tab);
+});
+els[tab.id].tabIndex = 0;
+show(null, true); apply();
+
+
+// ---- Tres maneras de construir ----
+const { steps } = timeline('terreno');
+const afterLot = steps.slice(steps.findIndex((s) => s.k === 'firma') + 1).reduce((a, s) => a + s.days, 0);
+const meter = (n) => `<span class="meter" aria-hidden="true">${[1, 2, 3].map((x) => `<i class="${x <= n ? 'on' : ''}"></i>`).join('')}</span>`;
+const pkgs = `<div class="pkgs">${homes.map((h) => `<a class="pkg" href="${ROOT}propiedad.html?id=${h.id}"><b>${h.model}</b><span class="num">${S.fmtShort(h.price)} <small>${S.cur()}</small></span><small>${S.fmtArea(h.built)} · ${plural(h.beds, 'recámara', 'recámaras', 'bedroom', 'bedrooms')} · ${T('terreno de', 'lot')} ${S.fmtArea(h.lot)}</small></a>`).join('')}</div>`;
+const WAYS = [
+  { t: T(`Elige uno de ${homes.length} modelos`, `Pick one of ${homes.length} models`),
+    p: T('Terreno y casa en un solo precio, llave en mano. Tú eliges el modelo; nosotros nos encargamos del resto.', 'Lot and house for one price, turnkey. You choose the model; we take care of the rest.'),
+    body: pkgs, time: `${range(homes.map((h) => h.deliveryMonths))} ${T('meses', 'months')}`, effort: 1, effortL: T('Mínimo', 'Minimal') },
+  // Orden pedido por Julian (26-nov-2026): de menor a mayor esfuerzo del comprador. La numeracion sale del orden.
+  { t: T('La construimos por ti', 'We build it for you'),
+    p: T('Traes tu idea o tu proyecto y nosotros lo construimos: del permiso de construcción a la entrega de llaves.', 'Bring your idea or your plans and we build it: from the building permit to handing you the keys.'),
+    body: `<p class="way__cta"><button class="link" data-contact data-intent="videollamada">${T('Platicar mi proyecto', 'Talk through my project')} ${icon('arrow', 18)}</button></p>`,
+    time: `~${Math.round(afterLot / 30)} ${T('meses', 'months')}`, effort: 2, effortL: T('Bajo', 'Low') },
+  { t: T('Trae a tu constructor', 'Bring your own builder'),
+    p: T('Compras el terreno y construyes con tu arquitecto y tu constructor, con tu diseño y a tu ritmo.', 'Buy the lot and build with your own architect and builder, to your design and at your pace.'),
+    body: `<p class="way__cta"><a class="link" href="#lotes">${T('Elegir un terreno', 'Choose a lot')} ${icon('arrow', 18)}</a></p>`,
+    time: T('Lo marca tu constructor', 'Set by your builder'), effort: 3, effortL: T('Tú coordinas', 'You coordinate') },
+];
+$('#ways').innerHTML = WAYS.map((w, i) => `<article class="way reveal" style="--d:${i * 0.1}s"><span class="way__n">0${i + 1}</span><h3 class="h3">${w.t}</h3><p>${w.p}</p>${w.body}
+  <dl class="way__dl"><div><dt>${T('Tiempo de obra', 'Build time')}</dt><dd>${w.time}</dd></div><div><dt>${T('Tu esfuerzo', 'Your effort')}</dt><dd>${meter(w.effort)}${w.effortL}</dd></div></dl></article>`).join('');
+
+// ---- Que tan rapido: el terreno tuyo y la casa lista ----
+const fo = $('#speed-foreign');
+function speed() {
+  const opts = { foreign: fo.checked };
+  const { steps: st } = timeline('terreno', opts);
+  const total = renderTimeline($('#speed-tl'), 'terreno', opts);
+  const k = st.findIndex((s) => s.k === 'firma');
+  const node = $$('.tl__step', $('#speed-tl'))[k];
+  node?.lastElementChild.insertAdjacentHTML('beforeend', `<span class="tl__flag">${T('Aquí el terreno ya es tuyo', 'Here the lot is yours')}</span>`);
+  const a = fmtTotal(st[k].at), b = fmtTotal(total);
+  countUp($('#ms-lot'), a.n, 900); $('#ms-lot-u').textContent = a.u;
+  countUp($('#ms-home'), b.n, 900); $('#ms-home-u').textContent = b.u;
+}
+fo.addEventListener('change', speed); speed();
+
+// ---- La vida aqui, ubicacion y cierre ----
+renderAmenities($('#amen'), P, { casaclub: [PH.clubTerraza, 'big'], vistas: [PH.picachos, 'wide'], huerto: [PH.huerto, ''], padel: [PH.tvPadel, ''] });
+// Fachadas del Arq. N. Ruiz (PDF de presentacion)
+$('#fach').innerHTML = TV_FACADES.map((u, i) => `<figure class="fach__f"><img src="${img(u)}" alt="${T('Fachada', 'Facade')} Terraviva 0${i + 1}" loading="lazy" decoding="async"><figcaption>Terraviva 0${i + 1}</figcaption></figure>`).join('');
+nearBars($('#near'));
+$('#cta-img').src = img(PH.smaCalle, 1800, 1000);
+const dk = dock(inv);
+dk.style.transition = 'transform .45s var(--ease)';
+new IntersectionObserver((es) => { dk.style.transform = es[0].isIntersecting ? 'translateY(110%)' : ''; }).observe($('#lotes .lots'));
+
+// Datos estructurados (sin coordenadas: las de Terraviva son de ejemplo en data.js)
+const url = `${BASE}/desarrollos/${P.id}.html`;
+jsonld({
+  '@type': ['Residence', 'Product'], '@id': `${url}#desarrollo`, name: P.name, url,
+  description: L(P.blurb), image: P.gallery.slice(0, 4).map((u) => img(u, 1600, 1000)),
+  brand: { '@type': 'Organization', name: COMPANY.name },
+  address: postal(), amenityFeature: amenityLd(P),
+  offers: { ...aggregateOffer(inv), itemCondition: 'https://schema.org/NewCondition', category: L({ es: 'Terrenos residenciales', en: 'Residential lots' }) },
+});
+reveal();
+</script>
+</body>
+</html>

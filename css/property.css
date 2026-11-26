@@ -1,0 +1,194 @@
+/* Plan de pagos fijo del desarrollador (casas de Punta del Cielo) */
+.pplan { display: flex; flex-direction: column; }
+.pplan__row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.pplan__row:first-child { padding-top: 0; }
+.pplan__row .label { display: block; margin-bottom: 8px; color: var(--leaf); }
+.pplan__row b { display: block; font: 500 22px/1.2 var(--serif); }
+.pplan__row small { display: block; margin-top: 4px; font-size: 13.5px; color: var(--ink-2); }
+.pplan__amt { text-align: right; flex: none; }
+.pplan__amt b { font: 600 19px/1.25 var(--sans); letter-spacing: -.02em; }
+.pplan .sim__eq { margin: 18px 0; }
+.pplan__bar { display: flex; gap: 4px; margin-top: 32px; max-width: 420px; }
+.pplan__bar i { display: grid; place-items: center; height: 40px; border-radius: 10px; background: var(--forest); color: var(--white); font: 600 13px/1 var(--sans); font-style: normal; }
+.pplan__bar i:nth-child(2) { background: var(--leaf); }
+.pplan__bar i:nth-child(3) { background: var(--clay); color: var(--ink); }
+
+/* Ficha de propiedad (/propiedad.html).
+   Orden de la pagina = orden de la decision: es para mi, me alcanza, donde esta, como se compara, que sigue.
+   Solo variables de base.css; .split, .shead, .speed y .switch vienen de home.css. */
+
+.pd { padding-top: calc(var(--nav-h) + 18px); }
+.crumbs { display: flex; flex-wrap: wrap; gap: 4px 8px; padding: 14px 0 18px; font-size: 13px; color: var(--ink-3); }
+.crumbs a { transition: color .2s; }
+.crumbs a:hover { color: var(--ink); }
+.crumbs [aria-current] { color: var(--ink-2); }
+
+/* Aviso de apartada / vendida */
+.notice { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 24px 56px; align-items: start; margin-bottom: 20px; padding: clamp(22px, 3vw, 36px); border-radius: var(--r); background: var(--sand); border: 1px solid var(--line); }
+.notice .h3 { margin: 12px 0 10px; }
+.notice .btn { margin-top: 18px; }
+.alts li + li { border-top: 1px solid var(--line); }
+.alts a { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 10px 0; }
+.alts a:hover b { color: var(--green); }
+.alts img, .alts .ph { width: 64px; height: 48px; border-radius: 8px; object-fit: cover; background: var(--stone); }
+.alts b { display: block; font: 500 20px/1.2 var(--serif); transition: color .2s; }
+.alts small { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 13px; color: var(--ink-2); }
+.alts .num { font-size: 15px; font-weight: 600; }
+@media (max-width: 760px) { .notice { grid-template-columns: minmax(0, 1fr); } }
+
+/* Galeria editorial */
+.gal { position: relative; display: grid; gap: 8px; height: clamp(320px, 58vh, 620px); border-radius: var(--r-lg); overflow: hidden; animation: fadeUp 1s var(--ease-out) both; }
+.gal--n1 { grid-template-columns: 1fr; }
+.gal--n2 { grid-template-columns: 1.618fr 1fr; }
+.gal--n3 { grid-template-columns: 1.618fr 1fr; grid-template-rows: 1fr 1fr; }
+.gal--n3 .gal__t:first-child { grid-row: 1 / 3; }
+.gal--n2 .gal__t:nth-child(n+3), .gal--n3 .gal__t:nth-child(n+4) { display: none; }
+.gal__t { position: relative; overflow: hidden; background: var(--stone); cursor: zoom-in; }
+.gal__t img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease-out); }
+.gal__t:hover img { transform: scale(1.03); }
+.gal__t:focus-visible { outline-offset: -5px; }
+.gal__all { position: absolute; right: 16px; bottom: 16px; z-index: 2; gap: 8px; box-shadow: var(--shadow); }
+.gal--empty { display: grid; place-items: center; text-align: center; padding: 32px; background: var(--forest); color: var(--white); }
+.gal--empty .h3 { margin: 14px 0 10px; }
+.gal--empty p:last-child { max-width: 34ch; margin-inline: auto; color: rgba(255, 253, 249, .72); }
+@media (max-width: 760px) {
+  .gal { display: flex; height: auto; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-inline: calc(var(--gut) * -1); padding-inline: var(--gut); scroll-padding-inline: var(--gut); border-radius: 0; }
+  .gal::-webkit-scrollbar { display: none; }
+  .gal__t { display: block !important; flex: 0 0 88%; aspect-ratio: 4 / 3; border-radius: var(--r); scroll-snap-align: start; }
+  .gal--n1 .gal__t { flex-basis: 100%; }
+  .gal__all { display: none; }
+  .gal--empty { display: grid; margin-inline: 0; aspect-ratio: 4 / 3; border-radius: var(--r); }
+}
+.gal__hint { display: none; margin-top: 10px; font-size: 13px; color: var(--ink-3); }
+@media (max-width: 760px) { .gal__hint { display: block; } }
+
+/* Cabecera: es para mi, me alcanza */
+.pd-top { display: grid; grid-template-columns: minmax(0, 1.618fr) minmax(320px, 1fr); gap: clamp(34px, 5vw, 89px); align-items: start; padding-top: clamp(36px, 5vw, 64px); padding-bottom: clamp(64px, 9vw, 120px); }
+.pd-title { margin: 14px 0 12px; }
+.pd-sub { font-size: 17px; color: var(--ink-2); }
+.pd-badges { margin-top: 20px; gap: 8px; }
+.pd .badge { background: var(--white); border: 1px solid var(--line); }
+.pd-price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; margin-top: clamp(28px, 4vw, 44px); }
+.pd-price > span { font: 600 clamp(38px, 4.8vw, 58px)/1 var(--sans); letter-spacing: -.035em; font-variant-numeric: tabular-nums; }
+.pd-price small { font-size: 15px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.pd-top .demo-note { margin-top: 10px; }
+.facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); margin-top: 32px; border-top: 1px solid var(--line); }
+.facts li { padding: 20px 16px 20px 0; border-bottom: 1px solid var(--line); }
+.facts b { display: block; font: 500 30px/1 var(--serif); letter-spacing: -.01em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.facts span { display: flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 14px; color: var(--ink-2); }
+.facts svg { opacity: .6; }
+.pd-acts { margin-top: 28px; gap: 10px; }
+.pd-acts .btn[aria-pressed="true"] { border-color: var(--forest); color: var(--forest); }
+.pd-acts [data-fav][aria-pressed="true"] svg { fill: var(--forest); }
+.pd-desc { margin-top: 36px; max-width: 60ch; }
+@media (max-width: 900px) { .pd-top { grid-template-columns: minmax(0, 1fr); } .ask { display: none; } }
+
+/* Tarjeta fija de contacto (escritorio) */
+.ask { position: sticky; top: calc(var(--nav-h) + 24px); }
+.ask .card { box-shadow: var(--shadow); }
+.ask__st { display: inline-flex; align-items: center; gap: 8px; }
+.ask__st::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.ask__st--disponible { color: var(--ok); } .ask__st--apartado { color: var(--hold); } .ask__st--vendido { color: var(--sold); }
+.ask__price { margin-top: 14px; font: 600 34px/1.05 var(--sans); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.ask__sub { margin-top: 6px; font-size: 14px; color: var(--ink-2); }
+.ask__acts { display: grid; gap: 10px; margin-top: 24px; }
+.ask__acts .btn { justify-content: flex-start; padding-left: 20px; }
+.ask__note { margin-top: 18px; font-size: 13px; color: var(--ink-3); text-align: center; }
+
+/* Planos */
+.pd-plans { margin-top: clamp(64px, 8vw, 104px); }
+.pd-plans .h2 { margin-top: 12px; }
+.plans { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 28px; }
+.plan { aspect-ratio: 4 / 3; padding: 14px; border-radius: var(--r); background: var(--white); border: 1px solid var(--line); cursor: zoom-in; transition: border-color .25s, box-shadow .4s var(--ease-out); }
+.plan:hover { border-color: var(--line-2); box-shadow: var(--shadow); }
+.plan img { width: 100%; height: 100%; object-fit: contain; background: transparent; }
+
+/* Que tan rapido puede ser tuya (usa .speed de home.css) */
+.speed .h1 { margin-top: 14px; }
+.sp-what { margin-top: 4px; font-size: 17px; color: rgba(255, 253, 249, .78); max-width: 34ch; }
+.sp-date { margin-top: 26px; max-width: 26ch; font: 400 clamp(24px, 2.4vw, 32px)/1.3 var(--serif); color: var(--white); text-wrap: balance; }
+.sp-date b { font-weight: 600; font-style: italic; }
+.sp-2 { margin-top: 14px; max-width: 44ch; font-size: 16px; color: rgba(255, 253, 249, .72); }
+.section--forest .demo-note { color: rgba(255, 253, 249, .56); }
+.section--forest .demo-note::before { background: var(--gold); }
+
+/* Hazla tuya: simulador */
+.sim { display: grid; gap: 6px; box-shadow: var(--shadow); }
+.sim__row { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-top: 14px; }
+.sim__row:first-child { margin-top: 0; }
+.sim__row output { font: 500 30px/1 var(--serif); font-variant-numeric: tabular-nums; }
+.sim input[type="range"] { height: 32px; background: linear-gradient(90deg, var(--forest) var(--p, 50%), var(--stone) var(--p, 50%)) center / 100% 4px no-repeat; }
+.sim__ends { display: flex; justify-content: space-between; font-size: 12px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.sim__out { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; margin-top: 18px; padding: 22px 0; border-block: 1px solid var(--line); }
+.sim__out b { display: block; margin-top: 10px; font: 600 clamp(22px, 2.4vw, 30px)/1.1 var(--sans); letter-spacing: -.025em; font-variant-numeric: tabular-nums; }
+.sim__out small { display: block; margin-top: 6px; font-size: 13px; color: var(--ink-3); }
+.sim__eq { margin: 14px 0 18px; font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+@media (max-width: 420px) { .sim__out { grid-template-columns: minmax(0, 1fr); } }
+
+/* Construye tu casa (solo terrenos) */
+.build { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.bopt { display: flex; flex-direction: column; gap: 6px; min-height: 140px; padding: 22px; border-radius: var(--r); border: 1px solid var(--line-2); background: var(--white); text-align: left; transition: border-color .25s var(--ease), box-shadow .25s, background .25s; }
+.bopt:hover { border-color: var(--ink); }
+.bopt[aria-pressed="true"] { border-color: var(--forest); background: rgba(31, 92, 120, .05); box-shadow: inset 0 0 0 1px var(--forest); }
+.bopt__n { font: 500 25px/1.1 var(--serif); }
+.bopt__m { font-size: 14px; color: var(--ink-2); }
+.bopt__m:last-child { margin-top: auto; }
+@media (max-width: 900px) { .build { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .build { grid-template-columns: minmax(0, 1fr); } .bopt { min-height: 0; } }
+.combo { margin-top: 24px; padding: clamp(24px, 3.4vw, 44px); border-radius: var(--r-lg); background: var(--sand); }
+.combo.is-new { animation: fadeUp .6s var(--ease-out); }
+.combo__sum { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 14px 26px; }
+.combo__sum b { display: block; margin-top: 10px; font: 600 clamp(22px, 2.6vw, 32px)/1.1 var(--sans); letter-spacing: -.025em; font-variant-numeric: tabular-nums; }
+.combo__op { padding-bottom: 2px; font: 300 30px/1 var(--sans); color: var(--ink-3); }
+.combo__tot b { font-size: clamp(30px, 3.6vw, 46px); color: var(--forest); }
+.combo__facts { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 24px 0; color: var(--ink-2); }
+.combo__facts li { display: flex; align-items: center; gap: 8px; }
+.combo__warn { margin-bottom: 22px; padding: 14px 18px; border-radius: 12px; background: var(--white); border: 1px solid var(--line-2); font-size: 15px; }
+.combo .demo-note { margin-top: 20px; }
+@media (max-width: 560px) { .combo__op { display: none; } .combo__sum > div { flex: 1 1 100%; } }
+
+/* Desarrollo y amenidades */
+.pd-dev .h2 { margin: 14px 0 18px; }
+.pd-dev .lede + p { margin-top: 18px; max-width: 58ch; color: var(--ink-2); }
+.pd-dev .link { margin-top: 26px; }
+.amen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; margin-top: 16px; }
+.amen li { display: flex; align-items: center; gap: 12px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+.amen svg { flex: none; color: var(--leaf); }
+@media (max-width: 480px) { .amen { grid-template-columns: minmax(0, 1fr); } }
+
+/* Ubicacion */
+.pd-loc .h2 { margin: 14px 0 20px; }
+.pd-loc .link { margin-top: 26px; }
+
+/* Sin propiedad */
+.nf { padding-top: calc(var(--nav-h) + clamp(64px, 11vw, 150px)); }
+.nf .h1 { margin: 16px auto 20px; max-width: 14ch; }
+.nf .lede { margin: 0 auto 36px; }
+.nf .row { justify-content: center; }
+
+/* Visor a pantalla completa */
+.lb { position: fixed; inset: 0; z-index: 110; display: grid; place-items: center; background: rgba(20, 22, 18, .96); opacity: 0; transition: opacity .4s var(--ease); touch-action: pan-y; }
+.lb.is-open { opacity: 1; }
+.lb__fig { width: 100%; height: 100%; display: grid; place-items: center; padding: 72px clamp(16px, 8vw, 120px); }
+.lb__fig img { max-width: 100%; max-height: 100%; object-fit: contain; background: transparent; opacity: 0; transform: scale(.985); transition: opacity .5s var(--ease), transform .8s var(--ease-out); }
+.lb__fig img.is-in { opacity: 1; transform: none; }
+.lb--plans .lb__fig img { padding: 16px; border-radius: 12px; background: var(--white); }
+.lb__count { position: absolute; left: var(--gut); top: 26px; font-size: 14px; color: rgba(255, 253, 249, .78); font-variant-numeric: tabular-nums; }
+.lb__x { position: absolute; right: 12px; top: 12px; color: var(--white); }
+.lb__x:hover, .lb__nav:hover { background: rgba(255, 253, 249, .2); }
+.lb__nav { position: absolute; top: 50%; width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; color: var(--white); background: rgba(255, 253, 249, .1); transform: translateY(-50%); transition: background .2s; }
+.lb__prev { left: 16px; }
+.lb__prev svg { transform: scaleX(-1); }
+.lb__next { right: 16px; }
+.lb :focus-visible { outline-color: var(--gold); }
+@media (max-width: 640px) {
+  .lb__fig { padding: 64px 0 104px; }
+  .lb__nav { top: auto; bottom: calc(28px + env(safe-area-inset-bottom)); transform: none; }
+  .lb__prev { left: calc(50% - 68px); } .lb__next { right: calc(50% - 68px); }
+}
+
+/* Barra inferior en movil */
+.dock__p { min-width: 0; }
+.dock__p b { display: block; font: 600 19px/1.15 var(--sans); letter-spacing: -.02em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dock__p small { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 12.5px; color: var(--ink-2); }
+.dock .btn { flex: none; }
